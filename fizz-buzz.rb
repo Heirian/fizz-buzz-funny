@@ -1,4 +1,9 @@
 # frozen_string_literal: true
+class Object
+  def presence
+    self if !empty?
+  end
+end
 
 class Funny
   def to_s
@@ -62,3 +67,5 @@ class FizzBuzz
     @maximum_oncoming = maximum_oncoming
   end
 end
+
+p FizzBuzz.run
